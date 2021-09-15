@@ -47,3 +47,26 @@
     object-fit: cover;
     object-position: center;
 }
+
+.nav {
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(100, 98, 98, 0.644);
+    border-radius: 30px;;
+}
+
+.nav i {
+    font-size: 3rem;
+    color: white;
+    padding: 15px;
+}
+
+.nav i:hover {
+    color: rgb(185, 184, 184, .5);
+}
+
+.nav i.active {
+    color: tomato;
+}

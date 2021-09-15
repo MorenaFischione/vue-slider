@@ -3,7 +3,7 @@ var app = new Vue(
     el: '#app',
 
     data: {
-        image : [
+        images : [
             {
                 source : "https://www.cinquecosebelle.it/wp-content/uploads/2018/08/cartoni-animati-anni-80-pollon.jpg",
                 alt : "immagine di pollon",
@@ -32,14 +32,21 @@ var app = new Vue(
         
         previousImg : function () {
             this.imageIndex--;
+
+            if (this.imageIndex < 0){
+                this.imageIndex = this.images.length - 1;
+            }
             
         },
 
         nextImg : function () {
             this.imageIndex++;
+
+            if (this.imageIndex >= this.images.length){
+                this.imageIndex = 0;
+            }
+            
         },
-
-
     }
 
     

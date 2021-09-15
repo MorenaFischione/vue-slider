@@ -27,11 +27,17 @@
             </div>
 
             <div class="image-slider">
-                <img :src="image[imageIndex].source" :alt="image[imageIndex].alt">
+                <img :src="images[imageIndex].source" :alt="images[imageIndex].alt">
             </div>
 
             <div class="next-image">
                 <i class="fas fa-angle-right" @click="nextImg()"></i>
+            </div>
+
+            <div class="nav">
+                <i class="fas fa-circle" 
+                :class="(index == imageIndex) ? ‘active’: ‘ ’"
+                v-for="(image, index) in images"></i> 
             </div>
             
                 
